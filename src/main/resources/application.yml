@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://azure-databae.mysql.database.azure.com:3306/swagger_product_db?useSSL=true&requireSSL=false
+    username: azure@azure-databae
+    password: password@123
+  jpa:
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+server:
+  port: 9191
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    operationsSorter: method
+logging:
+  level:
+    root: info
