@@ -1,9 +1,12 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://azure-databae.mysql.database.azure.com:3306/swagger_product_db?useSSL=true&requireSSL=false
-    username: azure@azure-databae
-    password: password@123
+#    url: jdbc:mysql://azure-databae.mysql.database.azure.com:3306/swagger_product_db?useSSL=true&requireSSL=false
+#    username: azure@azure-databae
+#    password: password@123
+    url: jdbc:mysql://localhost:3306/swagger_product_db?createDatabaseIfNotExist=true
+    username: root
+    password: root
   jpa:
     show-sql: 'true'
     hibernate:
@@ -13,7 +16,7 @@ spring:
 #        dialect: org.hibernate.dialect.SQLServer2012Dialect
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 server:
-  port: 9191
+  port: 8080
 
 springdoc:
   api-docs:

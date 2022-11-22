@@ -27,6 +27,11 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    @GetMapping("/helloworld")
+    public String helloWorld(){
+        return "hello world";
+    }
+
     @GetMapping("")
     public List<Product> getAllProduct(@RequestParam String consumerKey) {
         log.info("ConsumerKey: {}", consumerKey);
